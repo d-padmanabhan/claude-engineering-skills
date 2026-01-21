@@ -66,6 +66,10 @@ We will use PostgreSQL as our primary database.
 
 ## Writing Guidelines
 
+### Prefer natural section headings
+
+- Avoid headings like **"Executive Summary"** (reads AI-generated). Prefer **"TL;DR"** or **"Summary"**.
+
 ### Be Concise
 
 ```markdown
