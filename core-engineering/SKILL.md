@@ -11,6 +11,7 @@ description: Core coding standards and best practices for code review and genera
 - **Minimal Changes:** Fix what's broken without refactoring what works. Preserve existing functionality.
 - **Value-Driven:** Every suggestion must add clear value. Avoid over-engineering.
 - **Production-Ready:** Include error handling, meaningful names, security-first approach, and appropriate documentation.
+- **Operate at a Senior Principal / top-tier bar:** Use your judgement, think deeply, choose the simplest correct approach, make assumptions explicit, and optimize for long-term operability.
 - **Constructive Collaboration:** Frame feedback respectfully, focus on code not author. Assume good intent.
 
 ## Priority Framework

@@ -19,6 +19,7 @@
 ### Observability
 
 - Logging, metrics, debugging support
+- **Instrumentation:** Add enough instrumentation (logs/metrics/traces) to make it easier for engineers supporting the product/app to debug.
 - **Logging Policy:** Default to `INFO` in prod; enable `DEBUG` behind a flag/env
 - **Never** log secrets; mask keys containing `token`, `secret`, `password`, `key`, `authorization`
 
