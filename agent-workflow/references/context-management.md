@@ -31,9 +31,16 @@ Context files are workspace-specific and should be in an `extras/` directory:
 For non-trivial work, keep a single “north star” scope document and use it to drive small, sequential feature slices.
 
 - **Recommended file**: `extras/prd.md`
+- **Design doc (recommended when architecture/approach matters)**: `extras/design.md`
 - **Greenfield**: Define scope, non-goals, key flows, architecture, milestones
 - **Brownfield**: Capture current state + next desired state + constraints
 - **Rule**: Break work into features small enough for the agent to execute reliably (one feature per cycle)
+
+**When to create `extras/design.md`:**
+
+- Level 3–4 tasks (multi-module or architectural)
+- Any time there are multiple valid approaches with meaningful tradeoffs
+- Any time interfaces, data models, or operational behaviors might change
 
 ## Context reset between Plan → Build
 
@@ -162,6 +169,9 @@ Required Creative Phases:
 ## Context Management Templates
 
 Use these templates to maintain persistent context across sessions. Create files in `extras/` directory.
+
+> [!TIP]
+> If you need a fuller “north star” doc, use `extras/prd.md`. If the task has real design tradeoffs, add `extras/design.md` too.
 
 ### tasks.md Template
 

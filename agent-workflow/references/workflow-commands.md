@@ -43,7 +43,7 @@ If you find yourself giving the same prompt more than twice, treat it as a workf
    - Scan project structure
    - Identify tech stack and patterns
    - Note existing conventions
-   - Check for existing context files (`extras/tasks.md`, `extras/active-context.md`)
+   - Check for existing context files (`extras/prd.md`, `extras/design.md`, `extras/project-brief.md`, `extras/tasks.md`, `extras/active-context.md`)
 
 2. **Understand the Request**
    - What is the user asking for?
