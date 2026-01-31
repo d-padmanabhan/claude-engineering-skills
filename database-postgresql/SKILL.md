@@ -148,4 +148,5 @@ For detailed guidance, see:
 - [references/migrations.md](references/migrations.md) - Migration best practices, reversible migrations
 - [references/performance.md](references/performance.md) - Indexing strategies, query optimization
 - [references/security.md](references/security.md) - RLS, parameterized queries, connection pooling
+- [references/sql-safety.md](references/sql-safety.md) - SQL categories (DQL/DML/DDL/DCL/TCL) and destructive-operation guardrails
 - [references/advanced-patterns.md](references/advanced-patterns.md) - JSONB, full-text search, CTEs, partitioning

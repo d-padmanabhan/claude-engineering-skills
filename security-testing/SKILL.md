@@ -128,6 +128,7 @@ logger.info("User action", extra={
 ## Detailed References
 
 - **OWASP Security**: See [references/owasp-security.md](references/owasp-security.md)
+- **Identity & Access**: See [references/identity-access.md](references/identity-access.md) for IAM, OIDC/PKCE, SAML/ADFS, PKI, PAM
 - **Testing Strategies**: See [references/testing-strategies.md](references/testing-strategies.md)
 - **API Design**: See [references/api-design.md](references/api-design.md)
 - **Observability**: See [references/observability.md](references/observability.md)

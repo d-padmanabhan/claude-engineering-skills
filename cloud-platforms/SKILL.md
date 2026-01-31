@@ -154,3 +154,4 @@ export default {
 - **Azure**: See [references/azure.md](references/azure.md) for AKS, identity
 - **GCP**: See [references/gcp.md](references/gcp.md) for GKE, IAM
 - **Cloudflare**: See [references/cloudflare.md](references/cloudflare.md) for Workers, Pages
+- **Identity protocols**: See [../security-testing/references/identity-access.md](../security-testing/references/identity-access.md) for OIDC/PKCE and SAML/ADFS validation
