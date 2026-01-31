@@ -214,3 +214,5 @@ parse_args() {
 - **Shell Utilities**: See [references/shell-utilities.md](references/shell-utilities.md) for curl, jq, lynx
 - **Makefile Patterns**: See [references/makefile-patterns.md](references/makefile-patterns.md)
 - **CLI Design**: See [references/cli-design.md](references/cli-design.md)
+- **Justfile Patterns**: See [references/justfile.md](references/justfile.md)
+- **Repo Sync (rsync)**: See [references/rsync-repo-sync.md](references/rsync-repo-sync.md)

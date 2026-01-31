@@ -145,3 +145,4 @@ HEALTHCHECK --interval=30s --timeout=3s \
 - **Docker**: See [references/docker.md](references/docker.md)
 - **Ansible**: See [references/ansible.md](references/ansible.md)
 - **Configuration**: See [references/configuration.md](references/configuration.md)
+- **CloudFormation**: See [references/cloudformation.md](references/cloudformation.md)

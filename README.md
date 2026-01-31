@@ -1,4 +1,4 @@
-# Engineering Skills
+# Claude Engineering Skills
 
 A collection of Agent Skills for Claude that provide best-practice engineering guidance for code review, generation, and infrastructure management.
 
@@ -118,5 +118,3 @@ MIT License - See [LICENSE](LICENSE) for details.
 ## Acknowledgments
 
 These skills are derived from the [cursor-engineering-rules](https://github.com/d-padmanabhan/cursor-engineering-rules/tree/main) project, adapted for the Anthropic Agent Skills format.
-
-Big shout out to [@d-padmanabhan](https://github.com/d-padmanabhan) who made the original cursor engineering rules files.

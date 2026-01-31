@@ -160,3 +160,4 @@ server.setRequestHandler("resources/read", async (request) => {
 
 - **MCP Patterns**: See [references/mcp-patterns.md](references/mcp-patterns.md)
 - **AI/ML Integration**: See [references/ai-ml-integration.md](references/ai-ml-integration.md)
+- **LLM & RAG Patterns**: See [references/llm-rag-patterns.md](references/llm-rag-patterns.md)
