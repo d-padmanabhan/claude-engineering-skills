@@ -30,6 +30,9 @@ Context files are workspace-specific and should be in an `extras/` directory:
 
 For non-trivial work, keep a single “north star” scope document and use it to drive small, sequential feature slices.
 
+- `extras/` is intended for **workspace-local context and artifacts** and should be **gitignored by default**.
+- Do **not** commit or push files under `extras/` unless explicitly requested.
+
 - **Recommended file**: `extras/prd.md`
 - **Design doc (recommended when architecture/approach matters)**: `extras/design.md`
 - **Greenfield**: Define scope, non-goals, key flows, architecture, milestones
