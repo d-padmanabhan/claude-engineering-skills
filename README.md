@@ -37,13 +37,27 @@ Clone this repository and Claude Code will automatically discover the skills:
 
 ```bash
 # Clone to your home directory
-git clone https://github.com/YOUR_USERNAME/engineering-skills.git ~/.claude/skills/engineering-skills
+git clone https://github.com/d-padmanabhan/claude-engineering-skills.git ~/.claude/skills/claude-engineering-skills
 
 # Or clone to a project directory
-git clone https://github.com/YOUR_USERNAME/engineering-skills.git .claude/skills/engineering-skills
+git clone https://github.com/d-padmanabhan/claude-engineering-skills.git .claude/skills/claude-engineering-skills
 ```
 
 Skills in `~/.claude/skills/` are available globally, while skills in `.claude/skills/` are project-specific.
+
+#### Development Setup (Recommended)
+
+If you want to work on the skills as a development project while keeping them available to Claude Code:
+
+```bash
+# Clone to your code directory
+git clone https://github.com/d-padmanabhan/claude-engineering-skills.git ~/code/claude-engineering-skills
+
+# Create symlink for Claude Code to discover
+ln -s ~/code/claude-engineering-skills ~/.claude/skills/claude-engineering-skills
+```
+
+This approach keeps the repository in your organized code structure while making skills globally available. Any changes you make are immediately available to Claude Code.
 
 ### Claude.ai
 
