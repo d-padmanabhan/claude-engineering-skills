@@ -65,6 +65,15 @@ If verification cannot run, state:
 - The closest substitute run instead
 - What evidence was relied on
 
+**Examples of verification commands (not exhaustive):**
+
+- **Python:** `pytest`, `ruff check`, `ruff format --check`, `mypy`/`pyright`, `pylint`
+- **JavaScript/TypeScript:** `npm test`, `npm run lint`, `npm run build`, `tsc --noEmit`
+- **Go:** `go test ./...`, `golangci-lint run`, `gofmt -d .`
+- **Rust:** `cargo test`, `cargo clippy`, `cargo fmt --check`
+- **Shell:** `shellcheck *.sh`, `shfmt -d .`
+- **General:** `pre-commit run --all-files` (if configured)
+
 ## 5. Verifiable Audit Report (Mandatory)
 
 For every non-trivial task, write one report file:
@@ -124,7 +133,19 @@ asciinema rec -q "<GIT_REPO_ROOT>/extras/agent_reports/recordings/session.cast"
 - The markdown report remains the **primary audit artifact** (searchable, structured)
 - Recordings are for **understanding flow**, not for audit compliance
 
-## 6. GitHub CLI Read-Only Mode
+## 6. If Commits Are Authorized Later
+
+Only after the user explicitly authorizes commits:
+
+1. **Commit locally** with the agreed messages
+2. **Append to the audit report:**
+   - Commit SHAs and commit messages
+   - Output from: `git log --date=iso-strict -n <N>` (where `<N>` covers the new commits)
+   - Confirmation that commits match the proposed plan
+3. **Do NOT push** to remote unless explicitly authorized separately
+4. **Record the authorization** in the audit report with timestamp
+
+## 7. GitHub CLI Read-Only Mode
 
 **Allowed:**
 
@@ -139,7 +160,7 @@ asciinema rec -q "<GIT_REPO_ROOT>/extras/agent_reports/recordings/session.cast"
 - `gh repo fork`
 - Any `gh api` mutation (POST/PATCH/PUT/DELETE)
 
-## 7. Required Sequence
+## 8. Required Sequence
 
 ```
 Understand task → propose plan → create minimal change set → take checkpoints →
