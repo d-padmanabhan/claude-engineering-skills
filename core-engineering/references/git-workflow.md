@@ -48,6 +48,25 @@ Improves upgrade experience by making common path primary.
 BREAKING CHANGE: renamed output vpc_id to lattice_vpc_id
 ```
 
+## Commit Footers and Trailers
+
+**Allowed footers:**
+
+- `BREAKING CHANGE: <description>` - for breaking changes
+- `Fixes #<issue>`, `Closes #<issue>`, `Resolves #<issue>` - for issue tracking
+- `Refs #<issue>` - for issue references
+- `Co-authored-by: Name <email>` - for human co-authors only
+
+**Prohibited footers:**
+
+- **NEVER include AI-generated trailers** such as:
+  - `Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>`
+  - `Generated-By: Claude Code`
+  - `AI-Assisted: true`
+  - Any other footer indicating AI involvement
+
+**Rationale:** Commit history should reflect human authorship and decision-making. AI tools are development assistants, not co-authors.
+
 ## Scopes
 
 Use a concise noun oriented around the domain:
