@@ -751,6 +751,115 @@ When the goal is "read AWS, Cloudflare, Kubernetes docs reliably at scale", pref
 
 ---
 
+## Modern CLI Tools
+
+### fd (fast find alternative)
+
+Fast, user-friendly alternative to `find` written in Rust:
+
+```bash
+# Find files by name (case-insensitive by default)
+fd "\.py$"                    # Find all Python files
+fd "test"                     # Find files/dirs containing "test"
+fd -e py                      # Find files with .py extension
+fd -e py -e js                # Find .py or .js files
+
+# Search in specific directory
+fd "config" src/              # Find "config" in src/ directory
+
+# Case-sensitive search
+fd -s "Config"                # Case-sensitive search
+
+# Find directories only
+fd -t d "test"                # Find directories named "test"
+fd -t f "test"                # Find files only (default)
+
+# Exclude patterns
+fd -e py --exclude "venv"     # Find .py files, exclude venv/
+fd -E "*.pyc" -E "__pycache__"  # Exclude multiple patterns
+
+# Execute commands on results
+fd -e py -x python            # Run python on each .py file
+fd -e sh -x chmod +x          # Make shell scripts executable
+
+# Limit depth
+fd --max-depth 2 "test"       # Search max 2 levels deep
+
+# Common use cases
+fd "\.tf$"                    # Find Terraform files
+fd "README"                   # Find README files
+fd -e yaml -e yml             # Find YAML files
+fd "\.git" -t d               # Find .git directories
+```
+
+**Advantages over `find`:**
+
+- Faster (written in Rust)
+- Simpler syntax (no need for `-name`, `-type` flags)
+- Case-insensitive by default
+- Respects `.gitignore` automatically
+- Colorized output
+- Parallel execution
+
+**Migration from find:**
+
+```bash
+# find equivalent
+find . -name "*.py" -type f
+# fd equivalent
+fd -e py -t f
+
+# find equivalent
+find . -maxdepth 2 -name "test*"
+# fd equivalent
+fd --max-depth 2 "test"
+```
+
+---
+
+### fzf (fuzzy finder)
+
+Interactive fuzzy finder for command-line productivity:
+
+```bash
+# File search (Ctrl+T)
+# Type partial filename, fzf filters results as you type
+
+# Command history (Ctrl+R)
+# Search through shell history interactively
+
+# Directory navigation (Alt+C)
+# Change directory with fuzzy search
+
+# Git workflows
+git checkout $(git branch | fzf)              # Switch branches
+git log --oneline | fzf                        # Browse commits
+git diff $(git diff --name-only | fzf)         # View diff of selected file
+
+# Process management
+kill -9 $(ps aux | fzf | awk '{print $2}')     # Kill process interactively
+
+# Code search integration
+rg "pattern" | fzf                             # Search code, then filter results
+```
+
+**Shell integration setup:**
+
+```bash
+# Install shell bindings (adds Ctrl+R, Ctrl+T, Alt+C)
+$(brew --prefix)/opt/fzf/install
+```
+
+**Use cases:**
+
+- Finding files quickly without typing full paths
+- Searching command history efficiently
+- Navigating large directory structures
+- Enhancing git workflows with interactive selection
+- Filtering command output interactively
+
+---
+
 ## Resources
 
 - [awesome-tuis](https://github.com/rothgar/awesome-tuis) - Curated list of TUI applications for terminal productivity (dashboards, file managers, git tools, database clients, etc.)
