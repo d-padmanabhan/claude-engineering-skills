@@ -5,6 +5,25 @@
 - Never use `CloudFlare` anywhere (code/documentation). If found, fix to `Cloudflare`
 - For Cloudflare, do not use the word `Domain`. Always use `Zone`. If any docs mention “Cloudflare Domain”, fix to “Cloudflare Zone”
 
+## Rules language regex strings (raw vs quoted)
+
+Cloudflare expressions support string values as either quoted strings (`"..."`) or raw strings (`r"..."`).
+For regex patterns, prefer raw strings to reduce escaping mistakes (Cloudflare recommends this for regular expressions).
+
+- **Quoted string**: backslashes are parsed by the string literal first, then by the regex engine - easy to under/over-escape
+- **Raw string**: fewer escape surprises, easier to review
+
+> [!NOTE]
+> Case-insensitivity is separate. Use `(?i)` inside the regex (raw vs quoted does not control case sensitivity).
+>
+> Docs: `https://developers.cloudflare.com/ruleset-engine/rules-language/values/` (String values and regular expressions)
+
+Example (raw regex + anchors):
+
+```text
+(http.host matches r"(?i)^citizen-dev[0-9]+\.sbx\.apps\.acme\.com\.?$" and ip.src in $firm_egress_ips)
+```
+
 ## Workers
 
 ### Basic Worker
