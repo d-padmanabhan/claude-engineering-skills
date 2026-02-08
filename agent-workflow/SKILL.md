@@ -105,3 +105,7 @@ AI: "Let me design a solution first. Key decisions needed:
 For audit requirements including no remote writes, checkpoint management, and audit reports, see [references/audit-requirements.md](references/audit-requirements.md).
 
 For detailed context management and QA validation, see [references/context-management.md](references/context-management.md).
+
+## Session management (resume deterministically)
+
+To resume a session deterministically by UUID (without an interactive picker), see [references/session-management.md](references/session-management.md).
